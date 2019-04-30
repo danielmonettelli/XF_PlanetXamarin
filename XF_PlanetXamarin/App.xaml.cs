@@ -2,6 +2,8 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using XF_PlanetXamarin.Views;
+
 namespace XF_PlanetXamarin
 {
     public partial class App : Application
@@ -10,7 +12,7 @@ namespace XF_PlanetXamarin
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new BlogPage());
         }
 
         protected override void OnStart()

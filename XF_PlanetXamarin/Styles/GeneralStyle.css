@@ -1,2 +1,22 @@
-﻿body {
+﻿^ContentPage {
+    background-color: #e4e4e4;
+}
+
+/*Frame {
+    background-color: #8800ff;
+    border-radius: 15;
+}*/
+
+CollectionView > frame {
+    background-color: #e4e4e4;
+}
+
+.FramePost {
+    background-color: #281A61;
+    border-radius: 15;
+}
+
+.FrameRecentPost {
+    background-color: #3C1BC5;
+    border-radius: 15;
 }

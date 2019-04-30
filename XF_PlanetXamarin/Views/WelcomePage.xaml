@@ -1,5 +1,54 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XF_PlanetXamarin.Views.WelcomePage">
-    <ContentPage.Content>
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XF_PlanetXamarin.Views.WelcomePage"
+             NavigationPage.HasNavigationBar="False">
+    
+   <ContentPage.Content>
+
+        <Grid>
+            
+            <Image Source="BackgroundImage1.png"
+                   Aspect="AspectFill"/>
+            
+            <Grid RowSpacing="0"
+                  Padding="40,0">
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                
+                <StackLayout Spacing="-5"
+                             Grid.Row="0">
+                    
+                    <StackLayout.Padding>
+                        <OnPlatform Android="0,300,0,0"
+                                    iOS="0,400,0,0"/>
+                    </StackLayout.Padding>
+                    
+                    <Label Text="Welcome to"
+                           HorizontalOptions="CenterAndExpand"
+                           Style="{StaticResource lbl1Welcome}"
+                           VerticalOptions="CenterAndExpand"/>
+                    
+                    <Label Text="Planet Xamarin "
+                           HorizontalOptions="CenterAndExpand"
+                           Style="{StaticResource lbl1Welcome}"
+                           VerticalOptions="CenterAndExpand"/>
+                    
+                </StackLayout>
+
+                <Button Text="Get Started" 
+                        Grid.Row="1"
+                        Margin="0,55,0,0"
+                        Style="{StaticResource btn1Welcome}"
+                        HeightRequest="40"
+                        Visual="Material"/>
+
+            </Grid>
+        </Grid>
+        
     </ContentPage.Content>
+    
 </ContentPage>

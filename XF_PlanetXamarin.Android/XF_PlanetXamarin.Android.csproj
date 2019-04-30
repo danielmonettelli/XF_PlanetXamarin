@@ -15,7 +15,7 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
@@ -41,6 +41,28 @@
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Gorilla|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Gorilla</OutputPath>
+    <DefineConstants>DEBUG;GORILLA</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Gorilla|iPhoneSimulator' ">
+    <DebugType></DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Gorilla</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <JavaMaximumHeapSize></JavaMaximumHeapSize>
+    <AndroidEnableSGenConcurrent>false</AndroidEnableSGenConcurrent>
+    <AndroidManifest></AndroidManifest>
+    <AndroidDexTool></AndroidDexTool>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AndroidSupportedAbis>arm64-v8a;armeabi-v7a;x86</AndroidSupportedAbis>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="System" />
@@ -51,7 +73,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.6.0.264807" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.1" />
@@ -59,7 +81,16 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.0.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="UXDivers.GorillaPlayer.SDK.AutoConfig">
+      <Version>1.5.0-Beta4</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
+      <Version>3.0.0.5</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms.Visual.Material">
+      <Version>3.6.0.344457</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -88,6 +119,18 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\BackgroundImage1.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\BackgroundImage2.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\BackgroundImage1.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\BackgroundImage2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\BackgroundImage1.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\BackgroundImage2.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\BackgroundImage1.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\BackgroundImage2.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\BackgroundImage1.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\BackgroundImage2.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\BackgroundImage1.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\BackgroundImage2.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
@@ -101,6 +144,23 @@
       <Project>{735FC9CE-554B-4677-8DF8-A8E27D3F08BA}</Project>
       <Name>XF_PlanetXamarin</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\FontsFamily\SFProDisplay-Black.ttf" />
+    <AndroidAsset Include="Assets\FontsFamily\SFProDisplay-Bold.ttf" />
+    <AndroidAsset Include="Assets\FontsFamily\SFProDisplay-Heavy.ttf" />
+    <AndroidAsset Include="Assets\FontsFamily\SFProDisplay-Light.ttf" />
+    <AndroidAsset Include="Assets\FontsFamily\SFProDisplay-Medium.ttf" />
+    <AndroidAsset Include="Assets\FontsFamily\SFProDisplay-Regular.ttf" />
+    <AndroidAsset Include="Assets\FontsFamily\SFProDisplay-Semibold.ttf" />
+    <AndroidAsset Include="Assets\FontsFamily\SFProDisplay-Thin.ttf" />
+    <AndroidAsset Include="Assets\FontsFamily\SFProDisplay-Ultralight.ttf" />
+    <AndroidAsset Include="Assets\FontsFamily\SFProText-Bold.ttf" />
+    <AndroidAsset Include="Assets\FontsFamily\SFProText-Heavy.ttf" />
+    <AndroidAsset Include="Assets\FontsFamily\SFProText-Light.ttf" />
+    <AndroidAsset Include="Assets\FontsFamily\SFProText-Medium.ttf" />
+    <AndroidAsset Include="Assets\FontsFamily\SFProText-Regular.ttf" />
+    <AndroidAsset Include="Assets\FontsFamily\SFProText-Semibold.ttf" />
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

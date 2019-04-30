@@ -1,5 +1,39 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XF_PlanetXamarin.Views.DescriptionBlogPage">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XF_PlanetXamarin.Views.DescriptionBlogPage"
+             Title="Connect(); 2019 Xamarin Announcements">
+    
+    <!--<NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="Connect(); 2019 Xamarin 
+Announcements"
+              Style="{StaticResource lbl3TitleView}"/>
+        </StackLayout>
+    </NavigationPage.TitleView>-->
     <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="255"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Image Grid.Row="0"
+                   Source="BackgroundImage2.png"
+                   Aspect="AspectFill"/>
+
+            <StackLayout Grid.Row="1"
+                         Padding="16,0"
+                         Spacing="15"
+                         Margin="0,27,0,0">
+                <Label Text="by Author"
+                       Style="{StaticResource lbl3Author}"/>
+                <ScrollView>
+                    <Label Text="Lorem ipsum dolor sit amet, consete tur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd"
+                       Style="{StaticResource lbl3Description}"/>
+                </ScrollView>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
+    
 </ContentPage>

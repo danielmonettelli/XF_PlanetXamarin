@@ -1,5 +1,122 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XF_PlanetXamarin.Styles.General">
-    <ContentPage.Content>
-    </ContentPage.Content>
-</ContentPage>
+<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!-- FONTSFAMILY (SFProText) -->
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <OnPlatform x:TypeArguments="x:String" x:Key="BoldFont_SFProText">
+        <On Platform="Android" Value="FontsFamily/SFProText-Bold.ttf#SFProText"/>
+        <On Platform="iOS" Value="SFProText-Bold" />
+    </OnPlatform>
+    
+     <OnPlatform x:TypeArguments="x:String" x:Key="HeavyFont_SFProText">
+        <On Platform="Android" Value="FontsFamily/SFProText-Heavy.ttf#SFProText"/>
+        <On Platform="iOS" Value="SFProText-Heavy" />
+    </OnPlatform>
+    
+    <OnPlatform x:TypeArguments="x:String" x:Key="LightFont_SFProText">
+        <On Platform="Android" Value="FontsFamily/SFProText-Light.ttf#SFProText"/>
+        <On Platform="iOS" Value="SFProText-Light" />
+    </OnPlatform>
+    
+     <OnPlatform x:TypeArguments="x:String" x:Key="MediumFont_SFProText">
+        <On Platform="Android" Value="FontsFamily/SFProText-Medium.ttf#SFProText"/>
+        <On Platform="iOS" Value="SFProText-Medium" />
+    </OnPlatform>
+    
+      <OnPlatform x:TypeArguments="x:String" x:Key="RegularFont_SFProText">
+        <On Platform="Android" Value="FontsFamily/SFProText-Regular.ttf#SFProText"/>
+        <On Platform="iOS" Value="SFProText-Regular" />
+    </OnPlatform>
+
+    <OnPlatform x:TypeArguments="x:String" x:Key="SemiboldFont_SFProText">
+        <On Platform="Android" Value="FontsFamily/SFProText-Semibold.ttf#SFProText"/>
+        <On Platform="iOS" Value="SFProText-Semibold" />
+    </OnPlatform>
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    
+    <!-- STYLES WelcomePage-->
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <Style TargetType="Label" x:Key="lbl1Welcome">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont_SFProText}"/>
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="TextColor" Value="White"/>
+    </Style>
+
+    <Style TargetType="Button" x:Key="btn1Welcome">
+        <Setter Property="FontFamily" Value="{StaticResource MediumFont_SFProText}"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="TextColor" Value="White"/>
+        <Setter Property="BackgroundColor" Value="#ee3d96"/>
+        <Setter Property="CornerRadius" Value="15"/>
+    </Style>
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+    <!-- STYLES BlogPage-->
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <Style TargetType="Label" x:Key="lbl2TitleMaster">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont_SFProText}"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="TextColor" Value="White"/>
+    </Style>
+
+    <Style TargetType="Label" x:Key="lbl2DescriptionMaster">
+        <Setter Property="FontFamily" Value="{StaticResource MediumFont_SFProText}"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="TextColor" Value="White"/>
+    </Style>
+
+    <Style TargetType="Label" x:Key="lbl2DescriptionPost">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont_SFProText}"/>
+        <Setter Property="FontSize" Value="17"/>
+        <Setter Property="TextColor" Value="#0a0808"/>
+    </Style>
+
+    <Style TargetType="Label" x:Key="lbl2TitleFrame">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont_SFProText}"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="TextColor" Value="White"/>
+    </Style>
+
+    <Style TargetType="Label" x:Key="lbl2AuthorFrame">
+        <Setter Property="FontFamily" Value="{StaticResource MediumFont_SFProText}"/>
+        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="TextColor" Value="White"/>
+    </Style>
+
+    <Style TargetType="Label" x:Key="lbl2Description1Frame">
+        <Setter Property="FontFamily" Value="{StaticResource MediumFont_SFProText}"/>
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="TextColor" Value="White"/>
+    </Style>
+
+    <Style TargetType="Label" x:Key="lbl2Description2Frame">
+        <Setter Property="FontFamily" Value="{StaticResource MediumFont_SFProText}"/>
+        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="TextColor" Value="White"/>
+    </Style>
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+    <!-- STYLES DescriptionBlogPage-->
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <Style TargetType="Label" x:Key="lbl3TitleView">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont_SFProText}"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="TextColor" Value="White"/>
+    </Style>
+
+    <Style TargetType="Label" x:Key="lbl3Author">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont_SFProText}"/>
+        <Setter Property="FontSize" Value="17"/>
+        <Setter Property="TextColor" Value="#0a0808"/>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    </Style>
+
+    <Style TargetType="Label" x:Key="lbl3Description">
+        <Setter Property="FontFamily" Value="{StaticResource MediumFont_SFProText}"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="TextColor" Value="#0a0808"/>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    </Style>
+
+</ResourceDictionary>

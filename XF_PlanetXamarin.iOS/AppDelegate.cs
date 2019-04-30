@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -22,7 +22,31 @@ namespace XF_PlanetXamarin.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            // ADD CollectionView, etc
+            // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+            global::Xamarin.Forms.Forms.SetFlags(new[] { "CollectionView_Experimental", "Shell_Experimental" });
+            // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
             global::Xamarin.Forms.Forms.Init();
+
+            // ADD Init() Material Visual
+            // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+            global::Xamarin.Forms.FormsMaterial.Init();
+            // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+            // DEBUG GORILLA PLAYER EN iOS
+            // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+            var forceXamlOnlyTypeLoading = new[]
+            {
+                typeof(ImageCircle.Forms.Plugin.Abstractions.CircleImage),
+            };
+            // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+            // LOTTIE FORMS Init() PARA iOS
+            // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+            //AnimationViewRenderer.Init();
+            // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

@@ -1,5 +1,156 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XF_PlanetXamarin.Views.BlogPage">
-    <ContentPage.Content>
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:Custom="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="XF_PlanetXamarin.Views.BlogPage"
+             NavigationPage.HasNavigationBar="False">
+    
+     <ContentPage.Content>
+        <Grid RowSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Image Grid.Row="0"
+                   Source="BackgroundImage2.png"
+                   Aspect="AspectFit"
+                   VerticalOptions="StartAndExpand"
+                   HorizontalOptions="CenterAndExpand"/>
+
+            <StackLayout Grid.Row="0"
+                         Spacing="3"
+                         Padding="30,70,30,0">
+
+                <Label Text="Planet Xamarin"
+                       Style="{StaticResource lbl2TitleMaster}"/>
+
+                <Label Text="Xamarin world community"
+                       Style="{StaticResource lbl2DescriptionMaster}"/>
+
+            </StackLayout>
+
+
+            <Grid Grid.Row="1"
+                  RowSpacing="40">
+
+
+
+                <ScrollView Grid.Row="0">
+                    <StackLayout Padding="20,0,0,0"
+                                 Spacing="0">
+
+
+                        <StackLayout Grid.Row="0"
+                                     Margin="0,15,0,0">
+                            <Label Text="Posts"
+                                   Style="{StaticResource lbl2DescriptionPost}"
+                                   VerticalOptions="StartAndExpand"/>
+
+                            <CollectionView ItemsSource="{Binding .}"
+                                                HeightRequest="180">
+                                <CollectionView.ItemsLayout>
+                                    <GridItemsLayout Orientation="Horizontal"/>
+                                </CollectionView.ItemsLayout>
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+
+                                        <Frame Padding="0,0,20,0"
+                                               HasShadow="False">
+                                            <Frame WidthRequest="203"
+                                                   Padding="13"
+                                                   StyleClass="FramePost">
+
+                                                <StackLayout Spacing="0">
+                                                    <Label Text="{Binding Title}"
+                                                           Style="{StaticResource lbl2TitleFrame}"
+                                                           MaxLines="2"
+                                                           LineBreakMode="TailTruncation"/>
+                                                    <StackLayout Orientation="Horizontal"
+                                                                     Margin="0,7,0,12">
+                                                        <Custom:CircleImage Source="{Binding ImageAuthor}"
+                                                        BorderThickness="1"
+                                                        BorderColor="#5fffa0"
+                                                        HeightRequest="25"
+                                                        WidthRequest="25"
+                                                                    HorizontalOptions="Start"/>
+                                                        <Label Text="{Binding Author}"
+                                                       Style="{StaticResource lbl2AuthorFrame}"
+                                                       HorizontalOptions="StartAndExpand"
+                                                       VerticalOptions="CenterAndExpand"
+                                                       MaxLines="1"
+                                                       LineBreakMode="TailTruncation"/>
+                                                    </StackLayout>
+                                                    <Label Text="{Binding Description}"
+                                                   Style="{StaticResource lbl2Description1Frame}"
+                                                   MaxLines="4"
+                                                   LineBreakMode="TailTruncation"/>
+                                                </StackLayout>
+                                            </Frame>
+                                        </Frame>
+
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </StackLayout>
+
+
+                        <StackLayout Grid.Row="1"
+                             Grid.Column="0"
+                                 Margin="0,20,0,0">
+                            <Label Text="Recent Posts"
+                           Style="{StaticResource lbl2DescriptionPost}"
+                           VerticalOptions="StartAndExpand"/>
+
+                            <CollectionView ItemsSource="{Binding .}"
+                                            HeightRequest="100"
+                                            SelectionMode="Single">
+                                <CollectionView.ItemsLayout>
+                                    <GridItemsLayout Orientation="Horizontal"/>
+                                </CollectionView.ItemsLayout>
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+
+                                        <Frame Padding="0,0,20,0"
+                                               HasShadow="False">
+                                            <Frame WidthRequest="150"
+                                                       Padding="0"
+                                                       StyleClass="FrameRecentPost"
+                                                   Visual="Material">
+
+                                                <StackLayout Spacing="0">
+
+                                                    <Image Source="{Binding ImagePost}"
+                                                               Aspect="AspectFill"
+                                                               HeightRequest="56"
+                                                               HorizontalOptions="FillAndExpand"
+                                                               VerticalOptions="StartAndExpand"/>
+
+
+                                                    <Label Text="{Binding Title}"
+                                                               Style="{StaticResource lbl2Description2Frame}"
+                                                               MaxLines="2"
+                                                               LineBreakMode="TailTruncation"
+                                                               VerticalOptions="CenterAndExpand"
+                                                               HorizontalOptions="CenterAndExpand"
+                                                               Margin="9,12"/>
+
+                                                </StackLayout>
+                                            </Frame>
+                                        </Frame>
+
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </StackLayout>
+
+                    </StackLayout>
+                </ScrollView>
+
+            </Grid>
+
+
+        </Grid>
     </ContentPage.Content>
+    
 </ContentPage>
