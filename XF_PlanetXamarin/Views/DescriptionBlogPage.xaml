@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="XF_PlanetXamarin.Views.DescriptionBlogPage"
-             Title="Publication">
+             x:Class="XF_PlanetXamarin.Views.DescriptionBlogPage">
     
-    <!--<NavigationPage.TitleView>
+   <NavigationPage.TitleView>
         <StackLayout>
             <Label Text="{Binding Title}"
-              Style="{StaticResource lbl3TitleView}"/>
+                   VerticalOptions="CenterAndExpand"
+              Style="{StaticResource lbl3TitleView}">
+                <Label.HorizontalOptions>
+                    <OnPlatform Android="StartAndExpand"
+                                iOS="CenterAndExpand"/>
+                </Label.HorizontalOptions>
+            </Label>
         </StackLayout>
-    </NavigationPage.TitleView>-->
+    </NavigationPage.TitleView>
     
     <ContentPage.Content>
         <Grid RowSpacing="0">

@@ -9,6 +9,7 @@ namespace XF_PlanetXamarin.Views
 {
     public partial class DescriptionBlogPage : ContentPage
     {
+
         public DescriptionBlogPage(Publication toPublication)
         {
             InitializeComponent();

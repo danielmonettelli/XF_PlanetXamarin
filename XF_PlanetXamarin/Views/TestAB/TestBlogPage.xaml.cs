@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XF_PlanetXamarin.ViewModels;
 
 namespace XF_PlanetXamarin.Views.TestAB
 {
@@ -15,6 +16,8 @@ namespace XF_PlanetXamarin.Views.TestAB
         public TestBlogPage()
         {
             InitializeComponent();
+
+            BindingContext = new BlogViewModel(Navigation);
         }
     }
 }

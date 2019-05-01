@@ -91,8 +91,8 @@
     </Style>
 
     <Style TargetType="Label" x:Key="lbl2Description2Frame">
-        <Setter Property="FontFamily" Value="{StaticResource MediumFont_SFProText}"/>
-        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont_SFProText}"/>
+        <Setter Property="FontSize" Value="15"/>
         <Setter Property="TextColor" Value="White"/>
     </Style>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -102,7 +102,13 @@
     <Style TargetType="Label" x:Key="lbl3TitleView">
         <Setter Property="FontFamily" Value="{StaticResource BoldFont_SFProText}"/>
         <Setter Property="FontSize" Value="18"/>
-        <Setter Property="TextColor" Value="White"/>
+        <Setter Property="TextColor">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="Color">
+                    <On Platform="Android,iOS" Value="White"/>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
     </Style>
 
     <Style TargetType="Label" x:Key="lbl3Author">

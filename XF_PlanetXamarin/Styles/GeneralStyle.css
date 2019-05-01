@@ -7,6 +7,11 @@
     border-radius: 15;
 }*/
 
+navigationpage {
+    -xf-bar-background-color: #281A61;
+    /*-xf-bar-text-color: White;*/
+}
+
 CollectionView > frame {
     background-color: #e4e4e4;
 }
@@ -18,5 +23,6 @@ CollectionView > frame {
 
 .FrameRecentPost {
     background-color: #3C1BC5;
+    /*background-color: #EFB66E;*/
     border-radius: 15;
 }

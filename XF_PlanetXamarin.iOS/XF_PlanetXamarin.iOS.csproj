@@ -177,14 +177,11 @@
     <BundleResource Include="Resources\BackgroundImage2.png" />
     <BundleResource Include="Resources\BackgroundImage2%402x.png" />
     <BundleResource Include="Resources\BackgroundImage2%403x.png" />
-    <BundleResource Include="Resources\FontsFamily\SFProText-Bold.ttf" />
-    <BundleResource Include="Resources\FontsFamily\SFProText-Heavy.ttf" />
-    <BundleResource Include="Resources\FontsFamily\SFProText-Light.ttf" />
-    <BundleResource Include="Resources\FontsFamily\SFProText-Medium.ttf" />
-    <BundleResource Include="Resources\FontsFamily\SFProText-Regular.ttf" />
-    <BundleResource Include="Resources\FontsFamily\SFProText-Semibold.ttf" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\FontsFamily\" />
+    <BundleResource Include="Resources\SFProText-Bold.ttf" />
+    <BundleResource Include="Resources\SFProText-Heavy.ttf" />
+    <BundleResource Include="Resources\SFProText-Light.ttf" />
+    <BundleResource Include="Resources\SFProText-Medium.ttf" />
+    <BundleResource Include="Resources\SFProText-Regular.ttf" />
+    <BundleResource Include="Resources\SFProText-Semibold.ttf" />
   </ItemGroup>
 </Project>

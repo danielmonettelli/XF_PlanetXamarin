@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:Custom="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
@@ -49,8 +49,14 @@
                                VerticalOptions="StartAndExpand"
                                Margin="0,0,0,0"/>
 
-                        <CollectionView ItemsSource="{Binding .}"
-                                            SelectionMode="Single">
+                        <CollectionView ItemsSource="{Binding ListPublications}"
+                                            SelectionMode="Single"
+                                             SelectedItem="{Binding Publication, Mode=TwoWay}"
+                                              SelectionChangedCommand="{Binding NextPageCommand}">
+                            <CollectionView.HeightRequest>
+                                <OnPlatform iOS="270"
+                                            Android="580"/>
+                            </CollectionView.HeightRequest>
                                 <CollectionView.ItemsLayout>
                                     <GridItemsLayout Orientation="Horizontal"
                                                      SnapPointsType="Mandatory"
@@ -105,8 +111,10 @@
                            Style="{StaticResource lbl2DescriptionPost}"
                            VerticalOptions="StartAndExpand"/>
 
-                            <CollectionView ItemsSource="{Binding .}"
-                                            SelectionMode="Single">
+                            <CollectionView ItemsSource="{Binding ListPublications}"
+                                            SelectionMode="Single"
+                                             SelectedItem="{Binding Publication, Mode=TwoWay}"
+                                              SelectionChangedCommand="{Binding NextPageCommand}">
                                 <CollectionView.ItemsLayout>
                                     <GridItemsLayout Orientation="Vertical"
                                                      SnapPointsType="Mandatory"
@@ -118,7 +126,7 @@
                                         <Frame Padding="0,10"
                                             HasShadow="False">
 
-                                            <Frame HeightRequest="150"
+                                            <Frame HeightRequest="100"
                                                    Padding="0"
                                                    StyleClass="FrameRecentPost"
                                                    Visual="Material">
@@ -139,7 +147,6 @@
                                                                LineBreakMode="TailTruncation"
                                                                VerticalOptions="CenterAndExpand"
                                                                HorizontalOptions="CenterAndExpand"
-                                                               FontSize="15"
                                                                Margin="0,0,10,0"/>
 
                                                 </StackLayout>
