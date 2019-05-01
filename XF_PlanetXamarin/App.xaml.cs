@@ -12,7 +12,7 @@ namespace XF_PlanetXamarin
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new BlogPage());
+            MainPage = new NavigationPage(new WelcomePage());
         }
 
         protected override void OnStart()

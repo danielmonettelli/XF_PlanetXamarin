@@ -44,7 +44,8 @@
                         Margin="0,55,0,0"
                         Style="{StaticResource btn1Welcome}"
                         HeightRequest="40"
-                        Visual="Material"/>
+                        Visual="Material"
+                        Clicked="Button_Clicked"/>
 
             </Grid>
         </Grid>

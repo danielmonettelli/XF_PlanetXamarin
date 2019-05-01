@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:Custom="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:ViewModel="clr-namespace:XF_PlanetXamarin.ViewModels"
              x:Class="XF_PlanetXamarin.Views.BlogPage"
              NavigationPage.HasNavigationBar="False">
     
@@ -47,7 +48,10 @@
                                    Style="{StaticResource lbl2DescriptionPost}"
                                    VerticalOptions="StartAndExpand"/>
 
-                            <CollectionView ItemsSource="{Binding .}"
+                            <CollectionView ItemsSource="{Binding ListPublications}"
+                                            SelectionMode="Single"
+                                             SelectedItem="{Binding Publication, Mode=TwoWay}"
+                                              SelectionChangedCommand="{Binding NextPageCommand}"
                                                 HeightRequest="180">
                                 <CollectionView.ItemsLayout>
                                     <GridItemsLayout Orientation="Horizontal"/>
@@ -102,7 +106,9 @@
                            Style="{StaticResource lbl2DescriptionPost}"
                            VerticalOptions="StartAndExpand"/>
 
-                            <CollectionView ItemsSource="{Binding .}"
+                            <CollectionView ItemsSource="{Binding ListPublications}"
+                                             SelectedItem="{Binding Publication, Mode=TwoWay}"
+                                              SelectionChangedCommand="{Binding NextPageCommand}"
                                             HeightRequest="100"
                                             SelectionMode="Single">
                                 <CollectionView.ItemsLayout>

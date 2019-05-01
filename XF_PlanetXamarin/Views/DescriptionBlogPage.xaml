@@ -2,15 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="XF_PlanetXamarin.Views.DescriptionBlogPage"
-             Title="Connect(); 2019 Xamarin Announcements">
+             Title="Publication">
     
     <!--<NavigationPage.TitleView>
         <StackLayout>
-            <Label Text="Connect(); 2019 Xamarin 
-Announcements"
+            <Label Text="{Binding Title}"
               Style="{StaticResource lbl3TitleView}"/>
         </StackLayout>
     </NavigationPage.TitleView>-->
+    
     <ContentPage.Content>
         <Grid RowSpacing="0">
             <Grid.RowDefinitions>
@@ -19,17 +19,24 @@ Announcements"
             </Grid.RowDefinitions>
 
             <Image Grid.Row="0"
-                   Source="BackgroundImage2.png"
+                   Source="{Binding ImagePost}"
                    Aspect="AspectFill"/>
 
             <StackLayout Grid.Row="1"
                          Padding="16,0"
                          Spacing="15"
                          Margin="0,27,0,0">
-                <Label Text="by Author"
-                       Style="{StaticResource lbl3Author}"/>
+                <Label Text="{Binding Author}"
+                       Style="{StaticResource lbl3Author}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="By "/>
+                            <Span Text="{Binding Author}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
                 <ScrollView>
-                    <Label Text="Lorem ipsum dolor sit amet, consete tur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd"
+                    <Label Text="{Binding Description}"
                        Style="{StaticResource lbl3Description}"/>
                 </ScrollView>
             </StackLayout>
