@@ -7,7 +7,7 @@
         <StackLayout>
             <Label Text="{Binding Title}"
                    VerticalOptions="CenterAndExpand"
-              Style="{StaticResource lbl3TitleView}">
+                   Style="{StaticResource lbl3TitleView}">
                 <Label.HorizontalOptions>
                     <OnPlatform Android="StartAndExpand"
                                 iOS="CenterAndExpand"/>

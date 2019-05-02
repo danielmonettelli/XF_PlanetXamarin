@@ -96,6 +96,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SplashActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -131,6 +132,19 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\BackgroundImage2.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\BackgroundImage1.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\BackgroundImage2.png" />
+    <AndroidResource Include="Resources\drawable\SplashScreen.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\IconSplashScreen.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\IconSplashScreen.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\IconSplashScreen.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\IconSplashScreen.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\IconSplashScreen.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\IconSplashScreen.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\IconMain.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\IconMain.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\IconMain.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\IconMain.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\IconMain.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\IconMain.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

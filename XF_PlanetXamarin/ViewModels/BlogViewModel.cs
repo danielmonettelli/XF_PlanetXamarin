@@ -14,7 +14,9 @@ namespace XF_PlanetXamarin.ViewModels
 {
     public class BlogViewModel : INotifyPropertyChanged
     {
+        #region Interfaces
         INavigation _navigation;
+        #endregion
 
         #region Properties
         private bool _isBusy = false;

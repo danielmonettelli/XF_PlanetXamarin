@@ -22,7 +22,8 @@ CollectionView > frame {
 }
 
 .FrameRecentPost {
-    background-color: #3C1BC5;
+    /*background-color: #3C1BC5;*/
+    background-color: #BA1F6C;
     /*background-color: #EFB66E;*/
     border-radius: 15;
 }

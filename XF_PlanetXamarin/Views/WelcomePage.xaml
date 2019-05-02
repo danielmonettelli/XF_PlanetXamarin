@@ -24,7 +24,7 @@
                     
                     <StackLayout.Padding>
                         <OnPlatform Android="0,300,0,0"
-                                    iOS="0,400,0,0"/>
+                                    iOS="0,440,0,0"/>
                     </StackLayout.Padding>
                     
                     <Label Text="Welcome to"

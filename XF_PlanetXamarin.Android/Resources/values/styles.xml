@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    
+     <!--CREANDO EL SplashTheme-->
+  <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+  <style name="SplashTheme" parent="Theme.AppCompat.Light">
+    <item name="android:windowBackground">@drawable/SplashScreen</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowAnimationStyle">@null</item>
+  </style>
+  <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    
     <style name="MainTheme" parent="MainTheme.Base">
     </style>
     <!-- Base theme applied no matter what API -->
@@ -10,9 +21,9 @@
         <item name="windowActionBar">false</item>
         <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette -->
         <!-- colorPrimary is used for the default action bar background -->
-        <item name="colorPrimary">#2196F3</item>
+        <item name="colorPrimary">#1B1C49</item>
         <!-- colorPrimaryDark is used for the status bar -->
-        <item name="colorPrimaryDark">#1976D2</item>
+        <item name="colorPrimaryDark">#1B1C49</item>
         <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
         <item name="colorAccent">#FF4081</item>
