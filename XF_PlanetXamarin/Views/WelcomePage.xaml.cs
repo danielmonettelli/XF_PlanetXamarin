@@ -16,8 +16,8 @@ namespace XF_PlanetXamarin.Views
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            //await Navigation.PushAsync(new TestAB.TestBlogPage());
-            await Navigation.PushAsync(new BlogPage());
+            await Navigation.PushAsync(new TestAB.TestBlogPage());
+            //await Navigation.PushAsync(new BlogPage());
         }
     }
 }
