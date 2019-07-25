@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using XF_PlanetXamarin.Views;
+using XF_PlanetXamarin.Views.TestAB;
 
 namespace XF_PlanetXamarin
 {
@@ -12,7 +13,7 @@ namespace XF_PlanetXamarin
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new WelcomePage());
+            MainPage = new NavigationPage(new TestBlogPage());
         }
 
         protected override void OnStart()

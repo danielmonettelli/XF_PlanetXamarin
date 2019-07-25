@@ -35,9 +35,7 @@
                   RowSpacing="40">
 
 
-
-              
-                    <StackLayout Grid.Row="0"
+                <StackLayout Grid.Row="0"
                               Padding="20,0,0,0"
                               Spacing="0">
 
@@ -52,12 +50,9 @@
                         <CollectionView ItemsSource="{Binding ListPublications}"
                                             SelectionMode="Single"
                                              SelectedItem="{Binding Publication, Mode=TwoWay}"
-                                              SelectionChangedCommand="{Binding NextPageCommand}">
-                            <CollectionView.HeightRequest>
-                                <OnPlatform iOS="270"
-                                            Android="580"/>
-                            </CollectionView.HeightRequest>
-                                <CollectionView.ItemsLayout>
+                                              SelectionChangedCommand="{Binding NextPageCommand}"
+                                        Style="{StaticResource CollectionMaster}">
+                            <CollectionView.ItemsLayout>
                                     <GridItemsLayout Orientation="Horizontal"
                                                      SnapPointsType="Mandatory"
                                                      SnapPointsAlignment="Start"/>
