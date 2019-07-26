@@ -58,7 +58,7 @@
                                    Style="{StaticResource lbl2DescriptionPost}"
                                    VerticalOptions="StartAndExpand"/>
 
-                                <CollectionView ItemsSource="{Binding ListPublications}"
+                                <CollectionView ItemsSource="{Binding .}"
                                             SelectionMode="Single"
                                              SelectedItem="{Binding Publication, Mode=TwoWay}"
                                               SelectionChangedCommand="{Binding NextPageCommand}"
@@ -124,7 +124,7 @@
                            Style="{StaticResource lbl2DescriptionPost}"
                            VerticalOptions="StartAndExpand"/>
 
-                                <CollectionView ItemsSource="{Binding ListPublications}"
+                                <CollectionView ItemsSource="{Binding .}"
                                             SelectionMode="Single"
                                              SelectedItem="{Binding Publication, Mode=TwoWay}"
                                               SelectionChangedCommand="{Binding NextPageCommand}">
@@ -165,14 +165,14 @@
                                                                MaxLines="2"
                                                                LineBreakMode="TailTruncation"
                                                                VerticalOptions="Start"
-                                                               HorizontalOptions="CenterAndExpand"/>
+                                                               HorizontalOptions="StartAndExpand"/>
 
                                                             <Label Text="{Binding Description}"
                                                             Style="{StaticResource lbl2Description2Frame}"
                                                                MaxLines="4"
                                                                LineBreakMode="TailTruncation"
                                                                VerticalOptions="Start"
-                                                               HorizontalOptions="CenterAndExpand"/>
+                                                               HorizontalOptions="StartAndExpand"/>
                                                         </StackLayout>
                                                     </StackLayout>
                                                 </CustomGradient:PancakeView>

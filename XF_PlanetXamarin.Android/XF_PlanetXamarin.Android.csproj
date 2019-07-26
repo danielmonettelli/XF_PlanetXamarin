@@ -87,7 +87,7 @@
     <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
     <PackageReference Include="UXDivers.GorillaPlayer.SDK.AutoConfig">
-      <Version>1.5.2</Version>
+      <Version>1.5.0-Beta4</Version>
     </PackageReference>
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
       <Version>3.0.0.5</Version>
