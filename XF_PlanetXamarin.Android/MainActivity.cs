@@ -25,6 +25,8 @@ namespace XF_PlanetXamarin.Droid
             var forceXamlOnlyTypeLoading = new[]
             {
                 typeof(ImageCircle.Forms.Plugin.Abstractions.CircleImage),
+                typeof(Xamarin.Forms.PancakeView.PancakeView),
+                typeof(Xamarin.Forms.PancakeView.GradientStop)
             };
             // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

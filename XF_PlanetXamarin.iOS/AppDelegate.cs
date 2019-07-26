@@ -39,6 +39,8 @@ namespace XF_PlanetXamarin.iOS
             var forceXamlOnlyTypeLoading = new[]
             {
                 typeof(ImageCircle.Forms.Plugin.Abstractions.CircleImage),
+                typeof(Xamarin.Forms.PancakeView.PancakeView),
+                typeof(Xamarin.Forms.PancakeView.GradientStop)
             };
             // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
