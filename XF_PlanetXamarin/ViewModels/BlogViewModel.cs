@@ -9,6 +9,7 @@ using Xamarin.Forms;
 using XF_PlanetXamarin.Models;
 using XF_PlanetXamarin.Services;
 using XF_PlanetXamarin.Views;
+using XF_PlanetXamarin.Views.TestAB;
 
 namespace XF_PlanetXamarin.ViewModels
 {
@@ -48,7 +49,8 @@ namespace XF_PlanetXamarin.ViewModels
         #endregion
 
         #region Commands
-        public Command NextPageCommand { get; set; }
+        public Command NextDescriptionBlogPageCommand { get; set; }
+        public Command NextBlogPageCommand { get; set; }
         #endregion
 
         #region Constructors
@@ -58,8 +60,11 @@ namespace XF_PlanetXamarin.ViewModels
          
             GetService();
 
-            NextPageCommand = new Command(async () =>
+            NextDescriptionBlogPageCommand = new Command(async () =>
               await ToDescriptionBlogPage(), canExecute: () => !IsBusy);
+
+            NextBlogPageCommand = new Command(async () =>
+           await ToBlogPage(), canExecute: () => !IsBusy);
         }
         public BlogViewModel()
         {
@@ -72,6 +77,11 @@ namespace XF_PlanetXamarin.ViewModels
         private async Task ToDescriptionBlogPage()
         {
             await _navigation.PushAsync(new DescriptionBlogPage(Publication));
+        }
+
+        private async Task ToBlogPage()
+        {
+            await _navigation.PushAsync(new Test2BlogPage());
         }
         #endregion
 

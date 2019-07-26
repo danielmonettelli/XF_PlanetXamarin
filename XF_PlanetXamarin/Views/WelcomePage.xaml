@@ -45,7 +45,7 @@
                         Style="{StaticResource btn1Welcome}"
                         HeightRequest="40"
                         Visual="Material"
-                        Clicked="Button_Clicked"/>
+                        Command="{Binding NextBlogPageCommand}"/>
 
             </Grid>
         </Grid>

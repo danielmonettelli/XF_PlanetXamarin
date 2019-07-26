@@ -58,10 +58,10 @@
                                    Style="{StaticResource lbl2DescriptionPost}"
                                    VerticalOptions="StartAndExpand"/>
 
-                                <CollectionView ItemsSource="{Binding .}"
+                                <CollectionView ItemsSource="{Binding ListPublications}"
                                             SelectionMode="Single"
                                              SelectedItem="{Binding Publication, Mode=TwoWay}"
-                                              SelectionChangedCommand="{Binding NextPageCommand}"
+                                              SelectionChangedCommand="{Binding NextDescriptionBlogPageCommand}"
                                                 HeightRequest="180">
                                     <CollectionView.ItemsLayout>
                                         <GridItemsLayout Orientation="Horizontal"/>
@@ -124,10 +124,10 @@
                            Style="{StaticResource lbl2DescriptionPost}"
                            VerticalOptions="StartAndExpand"/>
 
-                                <CollectionView ItemsSource="{Binding .}"
+                                <CollectionView ItemsSource="{Binding ListPublications}"
                                             SelectionMode="Single"
                                              SelectedItem="{Binding Publication, Mode=TwoWay}"
-                                              SelectionChangedCommand="{Binding NextPageCommand}">
+                                              SelectionChangedCommand="{Binding NextDescriptionBlogPageCommand}">
                                     <CollectionView.ItemsLayout>
                                         <GridItemsLayout Orientation="Vertical"
                                                      SnapPointsType="Mandatory"

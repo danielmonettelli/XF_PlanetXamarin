@@ -11,13 +11,13 @@ namespace XF_PlanetXamarin.Views
         public WelcomePage()
         {
             InitializeComponent();
-            //BindingContext = new BlogViewModel(Navigation);
+            BindingContext = new BlogViewModel(Navigation);
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new TestAB.TestBlogPage());
-            //await Navigation.PushAsync(new BlogPage());
-        }
+        //private async void Button_Clicked(object sender, EventArgs e)
+        //{
+        //    await Navigation.PushAsync(new TestAB.Test2BlogPage());
+        //    //await Navigation.PushAsync(new BlogPage());
+        //}
     }
 }
