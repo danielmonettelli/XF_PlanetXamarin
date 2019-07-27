@@ -44,7 +44,7 @@
                                             BackgroundGradientAngle="135"
                                             BackgroundGradientStartColor="#ac1761"
                                             BackgroundGradientEndColor="#ee3d96"
-                                             CornerRadius="15"
+                                            CornerRadius="15"
                                             HeightRequest="40">
                     <Button Text="Get Started"
                         Style="{StaticResource btn1Welcome}"
