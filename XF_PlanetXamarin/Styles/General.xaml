@@ -56,7 +56,7 @@
         <Setter Property="FontFamily" Value="{StaticResource MediumFont_SFProText}"/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="TextColor" Value="White"/>
-        <Setter Property="BackgroundColor" Value="#ee3d96"/>
+        <Setter Property="BackgroundColor" Value="Transparent"/>
         <Setter Property="CornerRadius" Value="15"/>
     </Style>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->

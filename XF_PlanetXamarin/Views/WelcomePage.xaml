@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="XF_PlanetXamarin.Views.WelcomePage"
+             xmlns:CustomGradient="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              NavigationPage.HasNavigationBar="False">
     
    <ContentPage.Content>
@@ -38,14 +39,17 @@
                            VerticalOptions="CenterAndExpand"/>
                     
                 </StackLayout>
-
-                <Button Text="Get Started" 
-                        Grid.Row="1"
-                        Margin="0,55,0,0"
+                <CustomGradient:PancakeView Grid.Row="1"
+                                            Margin="0,55,0,0"
+                                            BackgroundGradientAngle="135"
+                                            BackgroundGradientStartColor="#ac1761"
+                                            BackgroundGradientEndColor="#ee3d96"
+                                             CornerRadius="15"
+                                            HeightRequest="40">
+                    <Button Text="Get Started"
                         Style="{StaticResource btn1Welcome}"
-                        HeightRequest="40"
-                        Visual="Material"
                         Command="{Binding NextBlogPageCommand}"/>
+                </CustomGradient:PancakeView>
 
             </Grid>
         </Grid>
