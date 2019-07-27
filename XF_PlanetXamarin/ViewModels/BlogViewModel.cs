@@ -81,7 +81,10 @@ namespace XF_PlanetXamarin.ViewModels
 
         private async Task ToBlogPage()
         {
+            IsBusy = true;
+            await Task.Delay(1000);
             await _navigation.PushAsync(new Test2BlogPage());
+            IsBusy = false;
         }
         #endregion
 

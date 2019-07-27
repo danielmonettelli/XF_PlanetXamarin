@@ -50,8 +50,15 @@
                         Style="{StaticResource btn1Welcome}"
                         Command="{Binding NextBlogPageCommand}"/>
                 </CustomGradient:PancakeView>
-
+                
+                <ActivityIndicator Grid.Row="2"
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="CenterAndExpand"
+                               Color="#ac1761"
+                               IsRunning="{Binding IsBusy}"
+                               IsVisible="{Binding IsBusy}"/>
             </Grid>
+           
         </Grid>
         
     </ContentPage.Content>
