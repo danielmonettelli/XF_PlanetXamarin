@@ -19,10 +19,9 @@
     
     <ContentPage.Content>
         <Grid>
-            <CustomGradient:PancakeView
-                BackgroundGradientAngle="135"
-                BackgroundGradientStartColor="#1B1C49"
-                BackgroundGradientEndColor="#030303"/>
+            <CustomGradient:PancakeView  BackgroundGradientAngle="135"
+                                         BackgroundGradientStartColor="#1B1C49"
+                                         BackgroundGradientEndColor="#030303"/>
             <Grid RowSpacing="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="240"/>
@@ -30,15 +29,15 @@
                 </Grid.RowDefinitions>
 
                 <Image Grid.Row="0"
-                   Source="{Binding ImagePost}"
-                   Aspect="AspectFill"/>
+                       Source="{Binding ImagePost}"
+                       Aspect="AspectFill"/>
 
                 <StackLayout Grid.Row="1"
-                         Padding="16,0"
-                         Spacing="15"
-                         Margin="0,27,0,0">
+                             Padding="16,0"
+                             Spacing="15"
+                             Margin="0,27,0,0">
                     <Label Text="{Binding Author}"
-                       Style="{StaticResource lbl3Author}">
+                           Style="{StaticResource lbl3Author}">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="By "/>
@@ -48,7 +47,7 @@
                     </Label>
                     <ScrollView>
                         <Label Text="{Binding Description}"
-                       Style="{StaticResource lbl3Description}"/>
+                               Style="{StaticResource lbl3Description}"/>
                     </ScrollView>
                 </StackLayout>
             </Grid>
