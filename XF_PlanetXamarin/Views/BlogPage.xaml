@@ -1,162 +1,191 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:Custom="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
-             xmlns:ViewModel="clr-namespace:XF_PlanetXamarin.ViewModels"
+             xmlns:CustomGradient="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              x:Class="XF_PlanetXamarin.Views.BlogPage"
              NavigationPage.HasNavigationBar="False">
-    
-     <ContentPage.Content>
-        <Grid RowSpacing="0">
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
+    <ContentPage.Content>
+        <Grid>
+            <CustomGradient:PancakeView BackgroundGradientAngle="135"
+                                        BackgroundGradientStartColor="#030303"
+                                        BackgroundGradientEndColor="#1B1C49"/>
+            <Grid RowSpacing="0">
 
-            <Image Grid.Row="0"
-                   Source="BackgroundImage2.png"
-                   Aspect="AspectFit"
-                   VerticalOptions="StartAndExpand"
-                   HorizontalOptions="CenterAndExpand"/>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0"
+                       Source="BackgroundImage2.png"
+                       Aspect="AspectFit"
+                       VerticalOptions="StartAndExpand"
+                       HorizontalOptions="CenterAndExpand"/>
 
-            <StackLayout Grid.Row="0"
-                         Spacing="3"
-                         Padding="30,70,30,0">
+                <StackLayout Grid.Row="0"
+                             Spacing="3"
+                             Padding="30,61,30,0">
 
-                <Label Text="Planet Xamarin"
-                       Style="{StaticResource lbl2TitleMaster}"/>
+                    <Label Text="Planet Xamarin"
+                           Style="{StaticResource lbl2TitleMaster}"/>
 
-                <Label Text="Xamarin world community"
-                       Style="{StaticResource lbl2DescriptionMaster}"/>
+                    <Label Text="Xamarin world community"
+                           Style="{StaticResource lbl2DescriptionMaster}"/>
 
-            </StackLayout>
-
-
-            <Grid Grid.Row="1"
-                  RowSpacing="40">
-
-
-
-                <ScrollView Grid.Row="0">
-                    <StackLayout Padding="20,0,0,0"
-                                 Spacing="0">
+                </StackLayout>
 
 
-                        <StackLayout Grid.Row="0"
-                                     Margin="0,15,0,0">
-                            <Label Text="Posts"
-                                   Style="{StaticResource lbl2DescriptionPost}"
-                                   VerticalOptions="StartAndExpand"/>
+                <Grid Grid.Row="1"
+                      RowSpacing="40">
 
-                            <CollectionView ItemsSource="{Binding ListPublications}"
-                                            SelectionMode="Single"
-                                             SelectedItem="{Binding Publication, Mode=TwoWay}"
-                                              SelectionChangedCommand="{Binding NextPageCommand}"
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <ScrollView Grid.Row="0">
+                        <StackLayout Padding="13,0,0,0"
+                                     Spacing="0">
+
+
+                            <StackLayout Grid.Row="0"
+                                         Margin="0,15,0,0">
+                                <Label Text="Posts"
+                                       Style="{StaticResource lbl2DescriptionPost}"
+                                       VerticalOptions="StartAndExpand"/>
+
+                                <CollectionView ItemsSource="{Binding ListPublications}"
+                                                SelectionMode="Single"
+                                                SelectedItem="{Binding Publication, Mode=TwoWay}"
+                                                SelectionChangedCommand="{Binding NextDescriptionBlogPageCommand}"
                                                 HeightRequest="180">
-                                <CollectionView.ItemsLayout>
-                                    <GridItemsLayout Orientation="Horizontal"/>
-                                </CollectionView.ItemsLayout>
-                                <CollectionView.ItemTemplate>
-                                    <DataTemplate>
+                                    <CollectionView.ItemsLayout>
+                                        <GridItemsLayout Orientation="Horizontal"/>
+                                    </CollectionView.ItemsLayout>
+                                    <CollectionView.ItemTemplate>
+                                        <DataTemplate>
 
-                                        <Frame Padding="0,0,20,0"
-                                               HasShadow="False">
-                                            <Frame WidthRequest="203"
-                                                   Padding="13"
-                                                   StyleClass="FramePost">
-
-                                                <StackLayout Spacing="0">
-                                                    <Label Text="{Binding Title}"
-                                                           Style="{StaticResource lbl2TitleFrame}"
-                                                           MaxLines="2"
-                                                           LineBreakMode="TailTruncation"/>
-                                                    <StackLayout Orientation="Horizontal"
-                                                                     Margin="0,7,0,12">
-                                                        <Custom:CircleImage Source="{Binding ImageAuthor}"
-                                                        BorderThickness="1"
-                                                        BorderColor="#5fffa0"
-                                                        HeightRequest="25"
-                                                        WidthRequest="25"
-                                                                    HorizontalOptions="Start"/>
-                                                        <Label Text="{Binding Author}"
-                                                       Style="{StaticResource lbl2AuthorFrame}"
-                                                       HorizontalOptions="StartAndExpand"
-                                                       VerticalOptions="CenterAndExpand"
-                                                       MaxLines="1"
-                                                       LineBreakMode="TailTruncation"/>
-                                                    </StackLayout>
-                                                    <Label Text="{Binding Description}"
-                                                   Style="{StaticResource lbl2Description1Frame}"
-                                                   MaxLines="4"
-                                                   LineBreakMode="TailTruncation"/>
-                                                </StackLayout>
-                                            </Frame>
-                                        </Frame>
-
-                                    </DataTemplate>
-                                </CollectionView.ItemTemplate>
-                            </CollectionView>
-                        </StackLayout>
+                                            <CustomGradient:PancakeView Padding="10,0,10,0"
+                                                                        HasShadow="False"
+                                                                        BackgroundColor="Transparent">
 
 
-                        <StackLayout Grid.Row="1"
-                             Grid.Column="0"
-                                 Margin="0,20,0,0">
-                            <Label Text="Recent Posts"
-                           Style="{StaticResource lbl2DescriptionPost}"
-                           VerticalOptions="StartAndExpand"/>
 
-                            <CollectionView ItemsSource="{Binding ListPublications}"
-                                             SelectedItem="{Binding Publication, Mode=TwoWay}"
-                                              SelectionChangedCommand="{Binding NextPageCommand}"
-                                            HeightRequest="100"
-                                            SelectionMode="Single">
-                                <CollectionView.ItemsLayout>
-                                    <GridItemsLayout Orientation="Horizontal"/>
-                                </CollectionView.ItemsLayout>
-                                <CollectionView.ItemTemplate>
-                                    <DataTemplate>
-
-                                        <Frame Padding="0,0,20,0"
-                                               HasShadow="False">
-                                            <Frame WidthRequest="150"
-                                                       Padding="0"
-                                                       StyleClass="FrameRecentPost"
-                                                   Visual="Material">
-
-                                                <StackLayout Spacing="0">
-
-                                                    <Image Source="{Binding ImagePost}"
-                                                               Aspect="AspectFill"
-                                                               HeightRequest="56"
-                                                               HorizontalOptions="FillAndExpand"
-                                                               VerticalOptions="StartAndExpand"/>
-
-
-                                                    <Label Text="{Binding Title}"
-                                                               Style="{StaticResource lbl2Description2Frame}"
+                                                <CustomGradient:PancakeView BackgroundGradientAngle="135"
+                                                                            BackgroundGradientStartColor="#7e4ae9"
+                                                                            BackgroundGradientEndColor="#1f1863"
+                                                                            WidthRequest="203"
+                                                                            Padding="13"
+                                                                            CornerRadius="15">
+                                                    <StackLayout Spacing="0">
+                                                        <Label Text="{Binding Title}"
+                                                               Style="{StaticResource lbl2Title1Frame}"
                                                                MaxLines="2"
-                                                               LineBreakMode="TailTruncation"
-                                                               VerticalOptions="CenterAndExpand"
-                                                               HorizontalOptions="CenterAndExpand"
-                                                               Margin="9,12"/>
+                                                               LineBreakMode="TailTruncation"/>
+                                                        <StackLayout Orientation="Horizontal"
+                                                                     Margin="0,7,0,12">
+                                                            <Custom:CircleImage Source="{Binding ImageAuthor}"
+                                                                                BorderThickness="1"
+                                                                                BorderColor="#5fffa0"
+                                                                                HeightRequest="25"
+                                                                                WidthRequest="25"
+                                                                                HorizontalOptions="Start"/>
+                                                            <Label Text="{Binding Author}"
+                                                                   Style="{StaticResource lbl2AuthorFrame}"
+                                                                   HorizontalOptions="StartAndExpand"
+                                                                   VerticalOptions="CenterAndExpand"
+                                                                   MaxLines="1"
+                                                                   LineBreakMode="TailTruncation"/>
+                                                        </StackLayout>
+                                                        <Label Text="{Binding Description}"
+                                                               Style="{StaticResource lbl2Description1Frame}"
+                                                               MaxLines="4"
+                                                               LineBreakMode="TailTruncation"/>
+                                                    </StackLayout>
+                                                </CustomGradient:PancakeView>
 
-                                                </StackLayout>
-                                            </Frame>
-                                        </Frame>
 
-                                    </DataTemplate>
-                                </CollectionView.ItemTemplate>
-                            </CollectionView>
+                                            </CustomGradient:PancakeView>
+
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
+                            </StackLayout>
+
+
+                            <StackLayout Grid.Row="1"
+                                         Margin="0,20,13,0">
+                                <Label Text="Recent Posts"
+                                       Style="{StaticResource lbl2DescriptionPost}"
+                                       VerticalOptions="StartAndExpand"/>
+
+                                <CollectionView ItemsSource="{Binding ListPublications}"
+                                                SelectionMode="Single"
+                                                SelectedItem="{Binding Publication, Mode=TwoWay}"
+                                                SelectionChangedCommand="{Binding NextDescriptionBlogPageCommand}">
+                                    <CollectionView.ItemsLayout>
+                                        <GridItemsLayout Orientation="Vertical"
+                                                         SnapPointsType="Mandatory"
+                                                         SnapPointsAlignment="Start"/>
+                                    </CollectionView.ItemsLayout>
+                                    <CollectionView.ItemTemplate>
+                                        <DataTemplate>
+
+                                            <CustomGradient:PancakeView Padding="0,10"
+                                                                        HasShadow="False">
+
+                                                <CustomGradient:PancakeView HeightRequest="120"
+                                                                            Padding="0,0,16.5,0"
+                                                                            CornerRadius="15"
+                                                                            BackgroundGradientAngle="135"
+                                                                            BackgroundGradientStartColor="#4aa9e9"
+                                                                            BackgroundGradientEndColor="#252193">
+
+                                                    <StackLayout Spacing="14.5"
+                                                                 Orientation="Horizontal">
+
+                                                        <CustomGradient:PancakeView CornerRadius="10"
+                                                                                    Margin="8.8,10,0,10">
+                                                            <Image Source="{Binding ImagePost}"
+                                                                   Aspect="AspectFill"
+                                                                   WidthRequest="99.6"
+                                                                   HeightRequest="99.6"/>
+                                                        </CustomGradient:PancakeView>
+
+
+                                                        <StackLayout Spacing="12"
+                                                                     VerticalOptions="Center">
+                                                            <Label Text="{Binding Title}"
+                                                                   Style="{StaticResource lbl2Title2Frame}"
+                                                                   MaxLines="2"
+                                                                   LineBreakMode="TailTruncation"
+                                                                   VerticalOptions="Start"
+                                                                   HorizontalOptions="StartAndExpand"/>
+
+                                                            <Label Text="{Binding Description}"
+                                                                   Style="{StaticResource lbl2Description2Frame}"
+                                                                   MaxLines="4"
+                                                                   LineBreakMode="TailTruncation"
+                                                                   VerticalOptions="Start"
+                                                                   HorizontalOptions="StartAndExpand"/>
+                                                        </StackLayout>
+                                                    </StackLayout>
+                                                </CustomGradient:PancakeView>
+                                            </CustomGradient:PancakeView>
+
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
+                            </StackLayout>
+
                         </StackLayout>
+                    </ScrollView>
 
-                    </StackLayout>
-                </ScrollView>
+                </Grid>
+
 
             </Grid>
-
-
         </Grid>
     </ContentPage.Content>
-    
+
 </ContentPage>

@@ -34,16 +34,7 @@
         <On Platform="iOS" Value="SFProText-Semibold" />
     </OnPlatform>
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <Style TargetType="CollectionView" x:Key="CollectionMaster">
-        <Setter Property="HeightRequest">
-            <Setter.Value>
-                <OnPlatform x:TypeArguments="x:Double">
-                    <On Platform="Android" Value="800"/>
-                    <On Platform="iOS" Value="270"/>
-                </OnPlatform>
-            </Setter.Value>
-        </Setter> 
-    </Style>
+  
     <!-- STYLES WelcomePage-->
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <Style TargetType="Label" x:Key="lbl1Welcome">
