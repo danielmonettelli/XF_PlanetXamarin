@@ -12,7 +12,7 @@
             <Image Source="BackgroundImage1.png"
                    Aspect="AspectFill"/>
             
-            <Grid RowSpacing="0"
+            <Grid RowSpacing="55"
                   Padding="40,0">
                 
                 <Grid.RowDefinitions>
@@ -24,7 +24,7 @@
                              Grid.Row="0">
                     
                     <StackLayout.Padding>
-                        <OnPlatform Android="0,300,0,0"
+                        <OnPlatform Android="0,299,0,0"
                                     iOS="0,440,0,0"/>
                     </StackLayout.Padding>
                     
@@ -40,7 +40,6 @@
                     
                 </StackLayout>
                 <CustomGradient:PancakeView Grid.Row="1"
-                                            Margin="0,55,0,0"
                                             BackgroundGradientAngle="135"
                                             BackgroundGradientStartColor="#ac1761"
                                             BackgroundGradientEndColor="#ee3d96"

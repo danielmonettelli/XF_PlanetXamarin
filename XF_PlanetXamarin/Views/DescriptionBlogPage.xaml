@@ -22,7 +22,9 @@
             <CustomGradient:PancakeView  BackgroundGradientAngle="135"
                                          BackgroundGradientStartColor="#1B1C49"
                                          BackgroundGradientEndColor="#030303"/>
-            <Grid RowSpacing="0">
+            
+            <Grid RowSpacing="36">
+                
                 <Grid.RowDefinitions>
                     <RowDefinition Height="240"/>
                     <RowDefinition Height="Auto"/>
@@ -33,9 +35,8 @@
                        Aspect="AspectFill"/>
 
                 <StackLayout Grid.Row="1"
-                             Padding="16,0"
-                             Spacing="15"
-                             Margin="0,27,0,0">
+                             Padding="27,0"
+                             Spacing="15">
                     <Label Text="{Binding Author}"
                            Style="{StaticResource lbl3Author}">
                         <Label.FormattedText>
