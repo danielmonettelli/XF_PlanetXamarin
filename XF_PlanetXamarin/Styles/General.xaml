@@ -90,8 +90,6 @@
         <Setter Property="TextColor" Value="White"/>
     </Style>
 
-  
-
     <Style TargetType="Label" x:Key="lbl2Title2Frame">
         <Setter Property="FontFamily" Value="{StaticResource BoldFont_SFProText}"/>
         <Setter Property="FontSize" Value="14"/>
