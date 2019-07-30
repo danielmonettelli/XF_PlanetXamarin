@@ -18,6 +18,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 
                 <StackLayout Spacing="-5"
@@ -51,8 +52,9 @@
                 </CustomGradient:PancakeView>
                 
                 <ActivityIndicator Grid.Row="2"
-                                   HorizontalOptions="CenterAndExpand"
-                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   HeightRequest="45"
                                    Color="#ac1761"
                                    Visual="Material"
                                    IsRunning="{Binding IsBusy}"

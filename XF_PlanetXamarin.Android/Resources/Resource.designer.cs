@@ -10427,9 +10427,6 @@ namespace XF_PlanetXamarin.Droid
 			// aapt resource value: 0x7f0c0046
 			public const int hide_bottom_view_on_scroll_behavior = 2131492934;
 			
-			// aapt resource value: 0x7f0c004e
-			public const int library_name = 2131492942;
-			
 			// aapt resource value: 0x7f0c0000
 			public const int mr_button_content_description = 2131492864;
 			
